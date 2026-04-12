@@ -16,10 +16,21 @@ def alternative_element_app1(arr: list):
 
     print(final_list)
 
+    # Time Complexity O(n)
+    # Space Complexity O(1)
+
 
 def alternative_element_app2(arr: list):
     final_list = []
 
-    for i in arr(0, len(arr), 2):
+    for i in range(0, len(arr), 2):
         final_list.append(arr[i])
+
     print(final_list)
+
+    # Time Complexity O(n)
+    # Space Complexity O(1)
+
+
+def alternative_element_app3(arr: list):
+    pass
