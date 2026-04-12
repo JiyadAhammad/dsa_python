@@ -8,10 +8,18 @@ Output: -5 4 12
 """
 
 
-def alternative_element(arr: list):
+def alternative_element_app1(arr: list):
     final_list = []
     for i, val in enumerate(arr):
         if i % 2 == 0:
             final_list.append(val)
 
+    print(final_list)
+
+
+def alternative_element_app2(arr: list):
+    final_list = []
+
+    for i in arr(0, len(arr), 2):
+        final_list.append(arr[i])
     print(final_list)
