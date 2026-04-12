@@ -32,5 +32,18 @@ def alternative_element_app2(arr: list):
     # Space Complexity O(1)
 
 
+# Recursive Approach
+def recursive_arr_item(idx: int, arr: list, result: list):
+    if idx < len(arr):
+        result.append(arr[idx])
+        recursive_arr_item(idx + 2, arr, result)
+
+
 def alternative_element_app3(arr: list):
-    pass
+    result = []
+    recursive_arr_item(0, arr, result)
+
+    print(result)
+
+    # Time Complexity O(n)
+    # Space Complexity O(n)
