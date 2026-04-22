@@ -1,5 +1,4 @@
-from linked_list.happy_number import happy_number
-from linked_list.palindrome_likedlist import palindrome_linked_list_app1
+from arr.three_sum import threeSum_app
 
 
 # alternative_element_app1([-5, 1, 4, 2, 12])
@@ -12,4 +11,7 @@ from linked_list.palindrome_likedlist import palindrome_linked_list_app1
 # print(ans)
 
 
-palindrome_linked_list_app1()
+# numSubarrayProductLessThanK(nums=[10, 5, 2, 6], k=100)
+
+ans = threeSum_app([1, -1, -1, 0])
+print(ans)
