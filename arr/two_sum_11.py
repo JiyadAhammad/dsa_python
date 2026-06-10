@@ -39,6 +39,34 @@ Therefore index1 = 1, index2 = 2. We return [1, 2].
 from typing import List
 
 
+def two_sum_brute(numbers: List[int], target: int) -> List[int]:
+    n = len(numbers)
+
+    for i in range(n):
+        for j in range(i + 1, n):
+            sum_num = numbers[i] + numbers[j]
+            if sum_num == target:
+                return [i + 1, j + 1]
+
+
+def two_sum_two_pointer(numbers: List[int], target: int) -> List[int]:
+    n = len(numbers)
+
+    left, right = 0, n - 1
+
+    while left < right:
+        sum_num = numbers[left] + numbers[right]
+        if sum_num == target:
+            return [left + 1, right + 1]
+        if sum_num > target:
+            right -= 1
+        else:
+            left += 1
+
+
+# =======================================================
+
+
 def twoSum_app(numbers: List[int], target: int) -> List[int]:
     n = len(numbers)
 
