@@ -1,0 +1,44 @@
+Array ->
+What is array ->
+1. An array is a fundamental data structure used to store a collection of data 
+    items of the same type under a single variable name
+2. Key Characteristics of Arrays
+    Contiguous Memory Location: Elements are stored back-to-back in your computer's physical memory. This layout allows the system to calculate the location of any element instantly.
+    Index-Based Access: Each item inside an array has a unique position number called an index. In almost all programming languages, indexing starts at 0 (zero-based indexing).
+    Homogeneous Elements: Traditionally, arrays are designed to hold items of the exact same data type (e.g., all integers or all strings).
+    Fixed Size: In standard compiled languages (like C++ or Java), you must declare the size of the array upfront, and it cannot grow or shrink during runtime.
+3. Methods or patterns
+    -> Two Pointers 
+        The two-pointer technique is an algorithm strategy that uses two variables (called pointers or indices) to traverse and manipulate data in an array or string. 
+        Instead of using nested loops, this approach solves problems in a single pass, typically reducing time complexity from O(n²) to O(n).
+        * The Array is Sorted (Order does not matter)
+        * You want to avoid nested loops (brute force)
+        * Reversing or Swapping
+        * Identifying Subarrays or Sequences
+        used in problems like Two Sum11,Three sum, Sort Colors,
+
+    -> Sliding Window
+        The Sliding Window technique is an algorithmic approach used to process contiguous subsets of data (like arrays or strings) by maintaining a subset of elements—the "window"—that moves across the data structure. 
+        It optimizes problems by replacing inefficient nested loops with a single loop, reducing time complexity from O(n²) to O(n).
+        * Contiguous Subarrays
+        * Optimization Problems
+        * Performance Optimization
+        1. Fixed-Size Window
+        2. Variable-Size Window
+
+    -> Prefix Sum 
+        An array prefix sum is a technique where you precompute and store a "running total" of an array. 
+        Each element in the new prefix sum array represents the sum of all elements from the start up to that index. 
+        This turns slow, repeated range-sum calculations into a single, lightning-fast math operation.
+        * Frequent Range Sum Queries
+        * Subarray Problems
+        * Matrix Area Calculations
+        * Equilibrium/Balance Points
+        * Operations with Inverses
+
+    -> Kadane’s Algorithm
+        Kadane’s Algorithm is an optimized dynamic programming technique used to find the maximum sum of a contiguous subarray within a one-dimensional array of numbers. 
+        It solves the problem in a single pass, making it incredibly fast compared to brute-force methods.
+        * Contiguous Subarrays
+        * Mixed Signs (if negative(-) max sum = 0)
+        * Optimization Needs
