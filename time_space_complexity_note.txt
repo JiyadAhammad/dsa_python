@@ -1,0 +1,45 @@
+Time and Space Complexity -> 
+1. Time Complexity ->
+    Time complexity in Data Structures and Algorithms (DSA) is a metric that quantifies the amount of time an algorithm takes to run as a function of the length of its input (n). 
+    It does not measure the actual execution time in seconds, because clock time changes based on hardware, operating systems, and compilers. Instead, it tracks how the number of primitive operations grows as the input data scales up.
+    -> The 10^8 operations concept:
+        The 10⁸ operations concept is a fundamental rule of thumb in computer science and competitive programming stating that a modern computer processor can execute roughly 10⁸ (100 million) simple operations per second.
+    -> TLE stands for Time Limit Exceeded
+        TLE error does not mean your logic is wrong. 
+        It simply means your algorithm is not efficient enough to handle large test cases within the required time window, which is typically set to 1 to 2 seconds
+    -> Constraints decide the approach
+    1<= n<= 10^5 = O(n) or O(n log n)
+    1<= n<= 10^8 = ?
+    1<= n<= 10^10 = Binary search
+    -> Visual growth curves
+        O(1) -> Constant
+        O(log n) -> Logarithmic
+        O(n) -> Linear -> traversal
+        O(n log n) -> Linearithmic
+        O(n^2) -> Quadratic -> nested loop
+        O(n^3) -> Cubic
+        O(2^n) -> Exponential -> Recursion
+        O(n!) -> Factorial -> Permutation
+    -> Best, Average, Worst -> 
+        Big O -> Upper bound
+        Big Omega -> Lower bound
+        Big theta -> tight bound
+    -> Misconception
+        -> Nested loops do not always mean O(n^2)
+        -> O(2n),O(3n), O(100n) All simplify to O(n)
+        -> Different variables matters O(n*m) not equal n^2
+        -> Big O ignores constants asymptotically
+        -> But constants still matters in real system
+
+2. Space Complexity
+    Memory optimization thinking
+
+    
+    n = 5
+
+    i =1, j =5
+    i=2 , j 5
+ 
+    j =0  => O(n)
+    i = 1 , j = 5 -> j = 6
+    i = 2 , j = 

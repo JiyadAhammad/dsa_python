@@ -1,0 +1,171 @@
+Time & Space Complexity
+1. Time Complexity
+    What is Time Complexity?
+        Time Complexity is a measure of how the running time of an algorithm grows with respect to the input size n.
+        It does not represent actual execution time in seconds because execution time depends on:
+
+        CPU
+        RAM
+        Compiler
+        Operating System
+
+        Instead, it measures the growth rate of operations as input size increases.
+
+    The 10⁸ Operations Rule
+        A common rule of thumb:
+        10⁸ ≈ 100 million operations ≈ 1 second
+        This isn't exact but helps estimate whether a solution will pass.
+        TLE (Time Limit Exceeded)
+        TLE means:
+        Your algorithm exceeded the allowed execution time.
+        It does not necessarily mean your logic is wrong.
+
+        Example:
+        n = 10⁵
+        O(n)      ✅ Pass
+        O(n log n) ✅ Pass
+        O(n²)     ❌ Usually TLE
+
+    Constraints Decide the Approach
+        A better interview cheat sheet is:
+
+        Input Size (n)	        Expected Complexity
+        n ≤ 10	                O(n!)
+        n ≤ 20	                O(2ⁿ)
+        n ≤ 500	                O(n³)
+        n ≤ 5000	            O(n²)
+        n ≤ 10⁵	                O(n log n) or O(n)
+        n ≤ 10⁶	                O(n)
+        n ≥ 10⁹ search space	O(log n) (Binary Search)
+
+        Examples
+        n = 10⁵
+        → O(n) or O(n log n)
+        n = 10⁶
+        → O(n)
+        Range = 1 to 10¹⁰
+        → Binary Search
+        → O(log n)
+
+    Notice:
+        1 <= n <= 10⁸
+        does NOT automatically tell complexity.
+        If you must iterate all elements:
+        O(n) = 10⁸ operations
+        which is already near the limit.
+
+    Visual Growth Order
+        Fastest → Slowest
+            O(1)
+            O(log n)
+            O(√n)
+            O(n)
+            O(n log n)
+            O(n²)
+            O(n³)
+            O(2ⁿ)
+            O(n!)
+                
+    Common Complexity Patterns
+            Complexity	Common Example
+            O(1)	    Array access
+            O(log n)	Binary Search
+            O(n)	    Array Traversal
+            O(n log n)	Merge Sort, Heap Sort
+            O(n²)	    Nested Loops
+            O(n³)	    Triple Nested Loops
+            O(2ⁿ)	    Backtracking
+            O(n!)	    Permutations
+    Best, Average, Worst Case
+        Big O
+        Upper bound
+        Worst Case
+        Example:
+        Linear Search → O(n)
+
+        Big Omega (Ω)
+        Lower bound
+        Best Case
+        Example:
+        Linear Search
+        Target at first position
+        Ω(1)
+
+        Big Theta (Θ)
+        Tight Bound
+        Average/Exact Growth Rate
+        When upper and lower bounds match.
+
+    Common Misconceptions
+    1. Nested Loops ≠ Always O(n²)
+        Example:
+        for i in range(n):
+            j = 1
+            while j < n:
+                j *= 2
+
+        Complexity:
+        O(n log n)
+        not
+        O(n²)
+
+    2. Constants Are Dropped
+        O(2n)
+        O(3n)
+        O(100n)
+
+        becomes:
+        O(n)
+            
+    3. Different Variables Matter
+        for i in range(n):
+            ...
+        for j in range(m):
+            ...
+        Complexity:
+        O(n + m)
+        not
+        O(n²)
+
+    4. Big O Ignores Constants
+        O(1000n)
+        becomes:
+        O(n)
+        for asymptotic analysis.
+        However:
+        Constants still matter in real-world systems.
+
+2. Space Complexity
+    What is Space Complexity?
+    Space Complexity measures the total memory required by an algorithm as input size grows.
+    Includes:
+    Input Space + Auxiliary Space
+
+    Most interview questions focus on:
+    Auxiliary Space
+    (extra memory used by algorithm)
+
+    Common Space Complexities
+        Complexity	Example
+        O(1)	    Variables only
+        O(log n)	Recursive Binary Search
+        O(n)	    Extra Array
+        O(n²)	    Matrix
+
+    Memory Optimization Thinking
+    Ask yourself:
+        Can I solve this without extra arrays?
+        Can I use two pointers?
+        Can I modify the input array?
+        Can I convert recursion to iteration?
+
+    Interview Cheat Sheet
+        Array Traversal         → O(n)
+        Nested Loops            → O(n²)
+        Binary Search           → O(log n)
+        Merge Sort              → O(n log n)
+        HashMap Lookup          → O(1)
+        Recursion Depth n       → O(n) Space
+        Two Pointers            → O(1) Space
+        Sliding Window          → O(1) Space
+        Prefix Sum              → O(n) Space

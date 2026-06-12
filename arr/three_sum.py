@@ -32,6 +32,25 @@ Explanation: The only possible triplet sums up to 0.
 """
 
 
+def three_sum_brute(nums: list[int]) -> list[list[int]]:
+    n = len(nums)
+    result = []
+
+    for i in range(n - 2):
+        for j in range(i + 1, n - 1):
+            for k in range(j + 1, n):
+                three_sum = nums[i] + nums[j] + nums[k]
+                if three_sum == 0:
+                    # sort = [nums[i], nums[j], nums[k]]
+                    sort = sorted([nums[i], nums[j], nums[k]])
+                    if sort not in result:
+                        result.append(sort)
+    return result
+
+
+# =======================================================
+
+
 def threeSum_app(nums: list[int]) -> list[list[int]]:
     n = len(nums)
 
@@ -45,8 +64,6 @@ def threeSum_app(nums: list[int]) -> list[list[int]]:
 
                 if sum == 0:
                     triplet = sorted([nums[i], nums[j], nums[k]])
-
-                    print(triplet)
 
                     if triplet not in result:
                         result.append(triplet)
