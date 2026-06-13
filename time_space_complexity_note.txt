@@ -33,13 +33,3 @@ Time and Space Complexity ->
 
 2. Space Complexity
     Memory optimization thinking
-
-    
-    n = 5
-
-    i =1, j =5
-    i=2 , j 5
- 
-    j =0  => O(n)
-    i = 1 , j = 5 -> j = 6
-    i = 2 , j = 
