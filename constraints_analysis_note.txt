@@ -1,0 +1,161 @@
+"
+Average case 1 sec -> 100M (100,000,000)
+border -> 100,000,000
+Level 1 (Easy)
+
+My Answer->
+    Q1. 1 <= n <= 50 (n = 50; n2 =2500; n3 = 125,000; n4 =6,250,000; n5= 312,500,000)
+    ans. n^4
+
+    Q2. 1 <= n <= 100
+    ans. n^3
+
+    Q3. 1 <= n <= 300 (n = 300; n2 =90,000; n3 = 27,000,000; n4 = 810)
+    ans. n^2
+
+    Q4. 1 <= n <= 500
+    ans. n^2
+
+    Q5. 1 <= n <= 1000 (n = 1000; n2 =1,000,000; n3 = 10,000,000,000)
+    ans. n log n or n
+
+    Here's a detailed review table:
+
+    Q	Constraint	Your Answer	        Actual Answer	Why
+    Q1	n ≤ 50	    O(n⁴)	            ✅ O(n⁴)	       50⁴ = 6.25 million operations, which is well within acceptable limits.
+    Q2	n ≤ 100	    O(n³)	            ✅ O(n³)        (O(n⁴) is borderline)	100³ = 1 million operations. Very safe. 100⁴ = 100 million, which is near the typical limit.
+    Q3	n ≤ 300	    O(n²)	            ❌ O(n³)	       300³ = 27 million operations. Still acceptable. You chose a safer complexity, but the question asks for the highest reasonable complexity.
+    Q4	n ≤ 500	    O(n²)	            ⚠️ O(n³)        (borderline)	500³ = 125 million operations. Slightly above the common 100 million rule, but often still acceptable depending on constants and time limits.
+    Q5	n ≤ 1000	O(n log n) / O(n)	❌ O(n²)	       1000² = 1 million operations, which is very small. No need to restrict yourself to O(n log n).
+
+==========================================================================
+
+
+Level 2 (Medium)
+    Q6. 1 <= n <= 2000 (n^2 = 4,000,000; n^3 = 8,000,000,000)
+    ans. n^2
+
+    Q7. 1 <= n <= 5000 (n^2 = 10,000,000; n^3 = 15,000,000,000)
+    ans. n^2
+
+    Q8. 1 <= n <= 10000 (n^2 = 100,000,000; n^3 = 1,000,000,000,000)
+    ans. n^2 (border)
+
+    Q9. 1 <= n <= 20000 (n = 20,000; n^2 = 400,000,000; n^3 = 8,000,000,000,000)
+    ans. n
+
+    Q10. 1 <= n <= 50000 (n = 50,000; n^2 = 1,000,000,000; n^3 = 15,000,000,000,000)
+    ans. n
+
+    Let's review.
+
+    Q	Constraint	Your Answer	    Actual Answer	    Review
+    Q6	n ≤ 2,000	O(n²)	        ✅ O(n²)	           2,000² = 4 million. Very safe.
+    Q7	n ≤ 5,000	O(n²)	        ✅ O(n²)	           5,000² = 25 million. Safe.
+    Q8	n ≤ 10,000	O(n²) (border)	✅ O(n²) (border)   10,000² = 100 million. Right on the common limit.
+    Q9	n ≤ 20,000	O(n)	        ⚠️ O(n log n)	    O(n²)=400 million is too much. But don't jump all the way to O(n). O(n log n) is usually the target.
+    Q10	n ≤ 50,000	O(n)	        ⚠️ O(n log n)	    O(n²)=2.5 billion. Impossible. O(n log n) is still perfectly acceptable.
+
+Level 3 (Interview Level)
+    Q11.1 <= n <= 100000 (n = 100,000; n log n = 1,700,000; n^2 = 10,000,000,000)
+    ans. n log n
+
+    Q12. 1 <= n <= 200000 (n = 200,000; n log n = 3,400,000; n^2 = 40,000,000,000)
+    ans. n log n
+
+    Q13. 1 <= n <= 500000 (n = 500,000; n log n = 8,500,000; n^2 = 100,000,000,000)
+    ans. n log n
+    
+    Q14. 1 <= n <= 1000000 (n = 1,000,000; n log n = 20,000,000; n^2 = 1,000,000,000,000)
+    ans. n
+
+    Q15. 1 <= n <= 10000000 (n = 10,000,000; n log n = 240,000,000)
+    ans. n (border)
+
+    Let's validate.
+
+    Q	Constraint	    Your Answer	Actual Answer	 Review
+    Q11	n ≤ 100,000	    O(n log n)	✅ O(n log n)	Perfect. n² is impossible.
+    Q12	n ≤ 200,000	    O(n log n)	✅ O(n log n)	Correct.
+    Q13	n ≤ 500,000	    O(n log n)	✅ O(n log n)	Correct.
+    Q14	n ≤ 1,000,000	O(n)	    ⚠️ O(n log n)    is still acceptable 20 million operations is usually fine.
+    Q15	n ≤ 10,000,000	O(n)	    ✅ O(n)	200     million operations is getting heavy, so O(n) is preferred.
+
+Level 4 (2 Variables)
+    Q16. 1 <= n,m <= 100 (n,m = 100*100 = 10,000; n2,m2 = 10,000*10,000 = 100,000,000)
+    What is the highest acceptable complexity?
+    ans. n^2*m^2
+    log2 1000 = 10 = 
+    Q17. 1 <= n,m <= 1000 
+    (n,m = 1000*1000 = 1,000,000; n,m log n,m = 10,000*10,000 =100,000,000; n2,m2 = 1,000,000*1,000,000 = 1,000,000,000,000)
+    ans. n log n*m log m
+
+    Q18. 1 <= n,m <= 10000 (n,m = 10000*10000 = 100,000,000)
+    ans. n*m 
+
+    Q	Constraint	Your Answer	        Actual Answer	        Reason
+    Q16	n,m ≤ 100	O(n²m²)	            ✅ O(n²m²)	           100M operations. Borderline but acceptable.
+    Q17	n,m ≤ 1000	O(nm log n log m)	✅ O(nm log n log m)	   ~100M operations. Good estimate.
+    Q18	n,m ≤ 10000	O(nm)	            ✅ O(nm)	               100M operations. Higher complexities become too large.
+
+Level 5 (Brute Force Recognition)
+    Q19. n <= 20 (1 m)
+    Can O(2ⁿ) be acceptable?
+    ans. yes
+
+    Q2. n <= 30 (1 b)
+    Can O(2ⁿ) be acceptable?
+    ans. No
+
+    Q21. n <= 40 (1 t)
+    Can O(2ⁿ) be acceptable?
+    ans. No
+
+    Q22. n <= 10
+    Can O(n!) be acceptable?
+    ans. yes
+
+    Q23. n <= 12
+    Can O(n!) be acceptable?
+    ans. yes (border)
+
+    Q	Constraint	Your Answer	     Actual Answer	 Reason
+    Q19	n ≤ 20	    ✅ Yes	        ✅ Yes	        2²⁰ ≈ 1 million operations. Completely acceptable.
+    Q20	n ≤ 30	    ✅ No	        ✅ No (usually)	2³⁰ ≈ 1 billion operations. Too much for brute force in most cases.
+    Q21	n ≤ 40	    ✅ No	        ✅ No	        2⁴⁰ ≈ 1 trillion operations. Impossible.
+    Q22	n ≤ 10	    ✅ Yes	        ✅ Yes	        10! = 3.6 million operations. Acceptable.
+    Q23	n ≤ 12	    ✅ Yes (border)	✅ Yes (border)	12! = 479 million operations. Heavy, but many backtracking problems still use it.
+
+Level 6 (Mixed)
+    For each, choose the largest complexity you would confidently try first.
+    Q24. n <= 250
+    ans. n^3
+
+    Q25. n <= 750
+    ans n^2
+
+    Q26. n <= 3000
+    ans n^2
+
+    Q27. n <= 15000
+    ans. n log n
+
+    Q28. n <= 75000
+    ans n log n
+
+    Q29. n <= 250000
+    ans n
+
+    Q30. n <= 1000000
+    ans log n
+
+    Q	Constraint	    Your Answer	    Actual Answer	        Reason
+    Q24	n ≤ 250	        O(n³)	        ✅ O(n³)	               250³ = 15.6M operations. Safe.
+    Q25	n ≤ 750	        O(n²)	        ⚠️ O(n³) (borderline)	750³ = 421M. Heavy but sometimes still acceptable depending on constants. O(n²) is the safer choice.
+    Q26	n ≤ 3000	    O(n²)	        ✅ O(n²)	               3000² = 9M operations. Very safe.
+    Q27	n ≤ 15000	    O(n log n)	    ✅ O(n log n)	       15000² = 225M. Too much.
+    Q28	n ≤ 75000	    O(n log n)	    ✅ O(n log n)	       Standard interview answer.
+    Q29	n ≤ 250000	    O(n)	        ⚠️ O(n log n)	        250000 × 18 ≈ 4.5M. Still very safe.
+    Q30	n ≤ 1000000	    O(log n)	    ❌ O(n log n)	       1,000,000 × 20 = 20M. Still acceptable. You became too aggressive here.
+"
+

@@ -1,4 +1,6 @@
 """
+75. Sort Colors
+
 Given an array nums with n objects colored red, white, or blue,
 sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
 
@@ -20,6 +22,21 @@ Output: [0,1,2]
 """
 
 from typing import List
+
+
+def sort_colors_brute(nums: List[int]) -> None:
+    n = len(nums)
+
+    for i in range(n - 1):
+        for j in range(i + 1, n):
+            if nums[i] >= nums[j]:
+                temp = nums[i]
+                nums[i] = nums[j]
+                nums[j] = temp
+    print(nums)
+
+
+# =======================================================
 
 
 def sortColors(nums: List[int]) -> None:
