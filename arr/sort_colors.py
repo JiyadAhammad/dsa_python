@@ -36,6 +36,56 @@ def sort_colors_brute(nums: List[int]) -> None:
     print(nums)
 
 
+def sort_colors_optimal(nums: List[int]) -> None:
+    n = len(nums)
+
+    count_zero = 0
+    count_one = 0
+    count_two = 0
+
+    for i in range(n):
+        if nums[i] == 0:
+            count_zero += 1
+        elif nums[i] == 1:
+            count_one += 1
+        else:
+            count_two += 1
+    count = 0
+    for i in range(count_zero):
+        nums[count] = 0
+        count += 1
+    for i in range(count_one):
+        nums[count] = 1
+        count += 1
+    for i in range(count_two):
+        nums[count] = 2
+        count += 1
+    print(nums)
+
+    # [2,0,2,1,1,0]
+    # [0,0,1,1,2,2]
+
+
+def sort_colors_best(nums: List[int]) -> None:
+    n = len(nums)
+
+    low = 0
+    mid = 0
+    high = n - 1
+
+    while mid <= high:
+        if nums[mid] == 0:
+            nums[low], nums[mid] = nums[mid], nums[low]
+            low += 1
+            mid += 1
+        elif nums[mid] == 1:
+            mid += 1
+        else:
+            nums[mid], nums[high] = nums[high], nums[mid]
+            high -= 1
+    print(nums)
+
+
 # =======================================================
 
 
