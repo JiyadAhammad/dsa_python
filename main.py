@@ -1,4 +1,4 @@
-from arr.most_water_container import maxArea_app
+from arr.most_water_container import max_area, max_area_optimal, maxArea_app
 from arr.move_zeros import move_zeros_brute
 from arr.sort_colors import (
     sort_colors_best,
@@ -33,5 +33,5 @@ from arr.two_sum_11 import two_sum_brute, two_sum_two_pointer
 
 # sortColors_app2([2, 0, 2, 1, 1, 0])
 
-ans = sort_colors_best([2, 0, 2, 1, 1, 0])
+ans = max_area_optimal([1, 8, 6, 2, 5, 4, 8, 3, 7])
 print(ans)
