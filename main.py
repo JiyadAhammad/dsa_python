@@ -15,6 +15,7 @@ from arr.three_sum import (
 )
 from arr.trapping_rain_water import trap_app
 from arr.two_sum_11 import two_sum_brute, two_sum_two_pointer
+from stack.first_greater_element_2 import nextGreaterElements
 
 # alternative_element_app1([-5, 1, 4, 2, 12])
 # alternative_element_app2([-5, 1, 4, 2, 12])
@@ -33,5 +34,5 @@ from arr.two_sum_11 import two_sum_brute, two_sum_two_pointer
 
 # sortColors_app2([2, 0, 2, 1, 1, 0])
 
-ans = max_area_optimal([1, 8, 6, 2, 5, 4, 8, 3, 7])
+ans = nextGreaterElements([1, 5, 3, 6, 8])
 print(ans)

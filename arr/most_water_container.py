@@ -66,7 +66,6 @@ def max_area_optimal(height: List[int]) -> int:
         breadth = min(height[left], height[right])
         length = right - left
         area = length * breadth
-        print(area)
         maxi_area = max(area, maxi_area)
         if height[left] > height[right]:
             right -= 1
