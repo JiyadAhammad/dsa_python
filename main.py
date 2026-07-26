@@ -1,3 +1,4 @@
+from arr.longest_subsstring_without_repeating_character import lengthOfLongestSubstring
 from arr.most_water_container import max_area, max_area_optimal, maxArea_app
 from arr.move_zeros import move_zeros_brute
 from arr.sort_colors import (
@@ -34,5 +35,5 @@ from stack.first_greater_element_2 import nextGreaterElements
 
 # sortColors_app2([2, 0, 2, 1, 1, 0])
 
-ans = nextGreaterElements([1, 5, 3, 6, 8])
+ans = lengthOfLongestSubstring("anviaj")
 print(ans)
