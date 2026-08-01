@@ -16,6 +16,7 @@ from arr.three_sum import (
 )
 from arr.trapping_rain_water import trap_app
 from arr.two_sum_11 import two_sum_brute, two_sum_two_pointer
+from stack.daily_temparature_739 import dailyTemperatures_2
 from stack.first_greater_element_2 import nextGreaterElements
 
 # alternative_element_app1([-5, 1, 4, 2, 12])
@@ -35,5 +36,5 @@ from stack.first_greater_element_2 import nextGreaterElements
 
 # sortColors_app2([2, 0, 2, 1, 1, 0])
 
-ans = lengthOfLongestSubstring("anviaj")
+ans = dailyTemperatures_2([73, 74, 75, 71, 69, 72, 76, 73])
 print(ans)

@@ -30,11 +30,11 @@ def lengthOfLongestSubstring(s: str) -> int:
         return n
 
     cur_len = max_len = 0
-    unique = set()
     # "pwwkew"
 
     for i in range(n - 1):
         cur_len = 1
+        unique = set()
         for j in range(i + 1, n):
             if s[i] != s[j] and s[j] not in unique:
                 cur_len += 1
