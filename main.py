@@ -18,6 +18,7 @@ from arr.trapping_rain_water import trap_app
 from arr.two_sum_11 import two_sum_brute, two_sum_two_pointer
 from stack.daily_temparature_739 import dailyTemperatures_2
 from stack.first_greater_element_2 import nextGreaterElements
+from stack.online_stock_span_901 import StockSpanner2
 
 # alternative_element_app1([-5, 1, 4, 2, 12])
 # alternative_element_app2([-5, 1, 4, 2, 12])
@@ -36,5 +37,14 @@ from stack.first_greater_element_2 import nextGreaterElements
 
 # sortColors_app2([2, 0, 2, 1, 1, 0])
 
-ans = dailyTemperatures_2([73, 74, 75, 71, 69, 72, 76, 73])
-print(ans)
+# ans = dailyTemperatures_2([73, 74, 75, 71, 69, 72, 76, 73])
+# print(ans)
+
+stockSpanner = StockSpanner2()
+stockSpanner.next(100)
+stockSpanner.next(80)
+stockSpanner.next(60)
+stockSpanner.next(70)
+stockSpanner.next(60)
+stockSpanner.next(75)
+stockSpanner.next(85)
