@@ -40,7 +40,7 @@ from stack.online_stock_span_901 import StockSpanner2
 
 # sortColors_app2([2, 0, 2, 1, 1, 0])
 
-ans = missingInteger([1, 2, 3, 2, 5])
+ans = missingInteger([3, 4, 5, 1, 12, 14, 13])
 print(ans)
 
 # stockSpanner = StockSpanner2()

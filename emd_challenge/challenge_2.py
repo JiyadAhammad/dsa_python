@@ -35,25 +35,26 @@ from typing import List
 
 
 ## Python Solution
-# Time Complexity = O2(n), overall (n)
+# Time Complexity = O(n)
 # Space Complexity = O(n),
 def missingInteger(nums: List[int]) -> int:
+    # Edge case -> But Constraints mentioned
+    # length 1 <= nums.length <= 50 (1 -> 50)
+    # so list should not be empty
+    if not nums:
+        return -1
+
     n = len(nums)
-    prefix = nums
+    total = nums[0]
 
     for i in range(1, n):
         if nums[i] != nums[i - 1] + 1:
-            prefix = nums[:i]
             break
+        total += nums[i]
 
-    total = sum(prefix)
+    num_set = set(nums)
 
-    if total in nums:
-        while True:
-            if total + 1 in nums:
-                total += 1
-            else:
-                return total + 1
+    while total in num_set:
+        total += 1
 
-    else:
-        return total
+    return total
