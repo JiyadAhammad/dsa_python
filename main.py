@@ -18,6 +18,7 @@ from arr.trapping_rain_water import trap_app
 from arr.two_sum_11 import two_sum_brute, two_sum_two_pointer
 from emd_challenge.challenge_1 import longestCommonPrefix
 from emd_challenge.challenge_2 import missingInteger
+from emd_challenge.challenge_3 import removeDuplicates
 from stack.asteroid_collision_735 import asteroidCollision
 from stack.daily_temparature_739 import dailyTemperatures_2
 from stack.first_greater_element_2 import nextGreaterElements
@@ -40,7 +41,7 @@ from stack.online_stock_span_901 import StockSpanner2
 
 # sortColors_app2([2, 0, 2, 1, 1, 0])
 
-ans = missingInteger([3, 4, 5, 1, 12, 14, 13])
+ans = removeDuplicates([1, 1, 2])
 print(ans)
 
 # stockSpanner = StockSpanner2()
