@@ -17,6 +17,7 @@ from arr.three_sum import (
 from arr.trapping_rain_water import trap_app
 from arr.two_sum_11 import two_sum_brute, two_sum_two_pointer
 from emd_challenge.challenge_1 import longestCommonPrefix
+from emd_challenge.challenge_10 import spiralOrder
 from emd_challenge.challenge_2 import missingInteger
 from emd_challenge.challenge_3 import removeDuplicates
 from emd_challenge.challenge_5 import lengthOfLastWord
@@ -45,7 +46,7 @@ from stack.online_stock_span_901 import StockSpanner2
 
 # sortColors_app2([2, 0, 2, 1, 1, 0])
 
-ans = fourSum([2, 2, 2, 2, 2], 8)
+ans = spiralOrder([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 print(ans)
 
 # stockSpanner = StockSpanner2()
