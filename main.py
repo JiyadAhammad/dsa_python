@@ -22,6 +22,7 @@ from emd_challenge.challenge_3 import removeDuplicates
 from emd_challenge.challenge_5 import lengthOfLastWord
 from emd_challenge.challenge_6 import moveZeroes
 from emd_challenge.challenge_8 import addBinary
+from pattern.inverted_right_half_pyramid import inverted_right_half_pyramid_pattern
 from pattern.right_half_pyramid import right_half_pyramid_pattern
 from stack.asteroid_collision_735 import asteroidCollision
 from stack.daily_temparature_739 import dailyTemperatures_2
@@ -57,4 +58,4 @@ from stack.online_stock_span_901 import StockSpanner2
 # stockSpanner.next(75)
 # stockSpanner.next(85)
 
-right_half_pyramid_pattern(5)
+inverted_right_half_pyramid_pattern(3)
