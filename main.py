@@ -22,6 +22,7 @@ from emd_challenge.challenge_3 import removeDuplicates
 from emd_challenge.challenge_5 import lengthOfLastWord
 from emd_challenge.challenge_6 import moveZeroes
 from emd_challenge.challenge_8 import addBinary
+from pattern.right_half_pyramid import right_half_pyramid_pattern
 from stack.asteroid_collision_735 import asteroidCollision
 from stack.daily_temparature_739 import dailyTemperatures_2
 from stack.first_greater_element_2 import nextGreaterElements
@@ -44,8 +45,8 @@ from stack.online_stock_span_901 import StockSpanner2
 
 # sortColors_app2([2, 0, 2, 1, 1, 0])
 
-ans = addBinary(a="11", b="1")
-print(ans)
+# ans = addBinary(a="11", b="1")
+# print(ans)
 
 # stockSpanner = StockSpanner2()
 # stockSpanner.next(100)
@@ -55,3 +56,5 @@ print(ans)
 # stockSpanner.next(60)
 # stockSpanner.next(75)
 # stockSpanner.next(85)
+
+right_half_pyramid_pattern(5)
