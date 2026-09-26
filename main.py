@@ -17,6 +17,8 @@ from arr.three_sum import (
 from arr.trapping_rain_water import trap_app
 from arr.two_sum_11 import two_sum_brute, two_sum_two_pointer
 from emd_challenge.challenge_1 import longestCommonPrefix
+from emd_challenge.challenge_10 import spiralOrder
+from emd_challenge.challenge_11 import Solution
 from emd_challenge.challenge_2 import missingInteger
 from emd_challenge.challenge_3 import removeDuplicates
 from emd_challenge.challenge_5 import lengthOfLastWord
@@ -25,6 +27,7 @@ from emd_challenge.challenge_8 import addBinary
 from pattern.full_pyramid import full_pyramid
 from pattern.inverted_right_half_pyramid import inverted_right_half_pyramid_pattern
 from pattern.right_half_pyramid import right_half_pyramid_pattern
+from emd_challenge.challenge_9 import fourSum
 from stack.asteroid_collision_735 import asteroidCollision
 from stack.daily_temparature_739 import dailyTemperatures_2
 from stack.first_greater_element_2 import nextGreaterElements
@@ -48,6 +51,7 @@ from stack.online_stock_span_901 import StockSpanner2
 # sortColors_app2([2, 0, 2, 1, 1, 0])
 
 # ans = addBinary(a="11", b="1")
+# ans = spiralOrder([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 # print(ans)
 
 # stockSpanner = StockSpanner2()
@@ -60,3 +64,8 @@ from stack.online_stock_span_901 import StockSpanner2
 # stockSpanner.next(85)
 
 full_pyramid(3)
+solution = Solution()
+
+ans = solution.generate(6)
+
+print(ans)
